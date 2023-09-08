@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'DefaultFont';
+    src:  url("./UDDigiKyokashoN-R.ttc") format('truetype');
+}
+
+* {
+    margin: 0;
+    font-family: 'DefaultFont';
+    scroll-behavior: smooth;
+    color: #e1e1e1;
+    
+}
+
+body {
+    background-color: #121212;
+    
+    .navbar {
+        position: fixed;
+        font-size: 30px;
+        top: 0;
+        width: 100%;
+        background-color: #202020;
+        padding: 20px;
+        box-shadow: 0 0 15px 1px black;
+    }
+
+    .MainBody {
+        display: flex;
+        position: relative;
+        font-size: 30px;
+        top: 90px;
+        margin: 100px;
+
+        .Selections {
+            padding: 30px;
+            width: 20vw;
+            height: 60vh;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0.1px black;
+            background-color: #1e1e1e;
+            margin-right: 100px;
+
+            h5 {
+                margin-right: 20px;
+            }
+
+            select {
+                position: relative;
+                top: -7px;
+                width: 20vw;
+                font-size: 25px;
+                background-color: #121212;
+                padding: 5px;
+                border-color: transparent;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .student_list
+            {
+                height: 75%;
+                overflow-x: hidden;
+                
+                p {
+                    font-size: 25px;
+                    cursor: pointer;
+                    padding-left: 10px;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    transition: background-color 0.1s;
+                    user-select: none;
+                    white-space: nowrap;
+                }
+
+                :hover {
+                    background-color: #474747;
+                }
+
+                :active {
+                    background-color: #333333;
+                }
+            }
+            
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        .Previewer
+        {
+            user-select: none;
+            padding: 30px;
+            width: 55vw;
+            height: 60vh;
+            border-radius: 20px;
+            box-shadow: 0 0 10px 0.1px black;
+            background-color: #1e1e1e;
+            text-align: center;
+            
+            h3 {
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+
+            // lmao, I hate css
+            div {
+                cursor: pointer;
+                height: 90%;
+                width: 100%;
+
+                #PreviewFrame {
+                    pointer-events: none;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        }
+    }
+}

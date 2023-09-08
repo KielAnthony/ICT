@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-Frame-Options" content="deny">
+        <link rel="stylesheet/less" href="./bin/style.less" type="text/css" preload>
+        <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" defer></script>
+
+        <title>Grade-11 ICT</title>
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <h1>Grade-11 ICT | HTML Activities</h1>
+        </div>
+        
+        <div class="MainBody">
+            <div class="Selections">
+                
+                <div style="display: flex;">
+                    <h5>Activities:</h5>
+                    <select>
+                        <option>1st</option>
+                        <option>2nd</option>
+                        <option>3rd</option>
+                    </select>
+                </div>
+                
+                <br/>
+                <hr/>
+                <br/>
+
+                <h5>Students:</h5>
+                <br/>
+                <div class="student_list">
+                    <p onclick="StudentClick(this)" data-link="./Activity 1/sample/Castro yexa/index.html">Castro, Yexa</p>
+                    <p onclick="StudentClick(this)" data-link="./Activity 1/sample/Dimayuga Rafael/index.html">Dimayuga, Rafael</p>
+                    <p onclick="StudentClick(this)" data-link="./Activity 1/sample/Pepito/index.html">Pepito, Kean James</p>
+                    <p onclick="StudentClick(this)" data-link="./Activity 1/sample/Prado Paul Jefferson/index.html" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                    <p onclick="StudentClick(this)" data-link="" >Prado, Paul Jefferson</p>
+                </div>
+            </div>
+            <div class="Previewer">
+                <h3>Preview:</h3>
+                <div onclick="OpenNewTab()" id="previewer" style="display: none;">
+                    <iframe id="PreviewFrame"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <script src="./bin/scripts.js"></script>
+    </body>
+</html>

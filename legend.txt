@@ -1,0 +1,6 @@
+navbar: #202020
+background: #121212
+background upper: #1e1e1e
+
+normal font color: #e1e1e1
+weak font color: #bebebe
