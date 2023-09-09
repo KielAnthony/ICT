@@ -94,6 +94,8 @@ function OpenNewTab()
 
 function RefreshList(element = null)
 {
+    document.querySelector(".student_list").innerHTML = "";
+
     ICT_CLASS.forEach(el =>{
  
         let activityName = "Activity 1"
