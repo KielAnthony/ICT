@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
         か(".Selections").sty("marginRight", "0px")
         か(".Selections").sty("width", "74%")
         か(".MainBody").sty("margin", "10px")
-
     }
 })
 
