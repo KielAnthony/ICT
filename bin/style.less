@@ -15,6 +15,7 @@ body {
     background-color: #121212;
     
     .navbar {
+        z-index: 1;
         display: flex;
         position: fixed;
         font-size: 30px;
@@ -39,17 +40,17 @@ body {
         display: flex;
         position: relative;
         font-size: 30px;
-        top: 90px;
+        top: 5vh;
         margin: 100px;
 
         .Selections {
             padding: 30px;
-            width: 20vw;
+            width: 40vw;
             height: 60vh;
             border-radius: 20px;
             box-shadow: 0 0 10px 0.1px black;
             background-color: #1e1e1e;
-            margin-right: 100px;
+            margin-right: 30px;
             overflow: hidden;
             transition: box-shadow 0.5s;
             
@@ -112,7 +113,7 @@ body {
         {
             user-select: none;
             padding: 30px;
-            width: 55vw;
+            width: 100vw;
             height: 60vh;
             border-radius: 20px;
             box-shadow: 0 0 10px 0.1px black;
@@ -151,6 +152,17 @@ body {
             box-shadow: 0 0 10px 0.1px rgb(38, 38, 38);
         }
     }
+
+    .footer {
+        text-align: center;
+        padding-top: 2vh;
+
+        a {
+            color: pink;
+            text-decoration: none;
+        }
+    }
+
 }
 
 [clicked] {
