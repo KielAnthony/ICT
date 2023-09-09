@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    background-color:black;
+}
+
+h2, p{
+    color: white;
+    text-align: center;
+    padding: 2%;
+}
+
+
+h2{
+    background-color: rgb(222, 250, 62);
+    color: black;
+    margin-bottom: 5em;
+}
+
+
+
+.cyan:hover{
+    background-color: cyan;
+    color: black;
+    transition: 0.5s;
+}
+
+.yellow:hover{
+    background-color: yellow;
+    color: black;
+    transition:0.5s ;
+    
+}
+.red:hover{
+    background-color:red ;
+    color: black;
+    transition: 0.5s;
+}
+
+.green:hover{
+    background-color: rgb(31, 202, 60);
+    color: black;
+    transition: 0.5s;
+}
+
+.violet:hover{
+    background-color: rgb(200, 62, 228);
+    color: black;
+    transition: 0.5s;
+}

@@ -1,6 +1,5 @@
 let ICT_CLASS =
 [
-    "Alvarez, John Loyd Saludario",
     "Alejaga, Rowin Carl Gravides",
     "Alejandro, Jade Maglaya",
     "Batta, Randy Milo",
@@ -99,12 +98,17 @@ function RefreshList(element = null)
  
         let activityName = "Activity 1"
 
+        か("#previewer").sty("display", "none")
+
         switch(element.value)
         {
             case "1st": activityName = "Activity 1"; break
             case "2nd": activityName = "Activity 2"; break
             case "3rd": activityName = "Activity 3"; break
         }
+
+        if(el == "Caballero, Janna Lyn Condiman")
+            document.querySelector(".student_list").innerHTML += "<hr/>"
 
         document.querySelector(".student_list").innerHTML += `<p studentButton onclick="StudentClick(this)" data-link="./${activityName}/${el}/index.html" >${el}</p>`        
     })
