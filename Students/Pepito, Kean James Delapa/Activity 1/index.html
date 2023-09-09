@@ -1,54 +1,67 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%;">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Activity 1 - ICT</title>
-
-        <style>
-            @font-face {
-                font-family: 'DefaultFont';
-                src:  url("../../../bin/UDDigiKyokashoN-R.ttc") format('truetype');
-            }
-
-            *{
-                margin: 0;
-                font-family: 'DefaultFont';
-            }
-            
-            .blur_fill
-            {
-                position: fixed;
-                background-image: url("https://wallpaperaccess.com/full/661801.jpg");
-                background-repeat: no-repeat;
-                background-size: cover;
-                filter: blur(5px);
-                -webkit-filter: blur(5px);
-                height: 100%;
-                width: 100%;
-            }
-
-            .main {
-                position: relative;
-                display: grid;
-                place-items: center;
-                color: white;
-                font-size: 50px;
-            }
-
-            h1 {
-                background-color: #000000A0;
-                width: 100%;
-                text-align: center;
-            }
-        </style>
-
+        <link rel="stylesheet" href="styles.css">
+        <title>Changable Background Colors</title>
     </head>
     <body>
-        <div class="blur_fill"></div>
-        <div class="main">
-            <img alt="ass" src="https://static.wikia.nocookie.net/dbxfanon/images/b/b5/Gsetaow81g811.png"/>
-            <h1>Work In Progress<br/>Activity 1</h1>
+
+        <div class="heading">
+            Background Colors
         </div>
+
+        <div style="position: relative;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto;
+                    top: 35vh;
+                    margin-left: 10%;
+                    margin-right: 10%;"
+                    id="placeholder">
+
+            <!-- AUTOMATICALLY ADDED BY THE JAVASCRIPT ON RUN -->
+                    
+        </div>
+
+        <div class="waif">
+            <img alt="boi waif" src="img/astolfo.png">
+        </div>
+
+        <script>
+
+            let colorList = ["red", "orange", "yellow", "green", "blue", "indigo", "violet", "pink", "black", "white", "wheat", "maroon"]
+
+            colorList.forEach(el => {
+
+                let color = "white";
+
+                if(el.match("Yellow|pink|white|wheat"))
+                {
+                    color = "black";
+                }
+
+                let template = `
+                <div ${el} class="colorBackground" style="background-color: ${el};">
+                    <p style="color: ${color};">${el}</p>
+                </div>`
+
+                document.querySelector("#placeholder").innerHTML += template;
+            });
+
+            document.querySelectorAll(".colorBackground").forEach(el=>{
+                el.addEventListener("mouseenter", ()=>{
+                    document.querySelector("body").style.background = el.style.backgroundColor;
+
+                    if(el.style.backgroundColor == "pink")
+                        document.querySelector(".waif").style.opacity = 1;
+                })
+                el.addEventListener("mouseleave", ()=>{
+                    document.querySelector("body").style.background = "skyblue";
+                    document.querySelector(".waif").style.opacity = 0;
+                })
+            })
+
+        </script>
     </body>
 </html>
