@@ -110,6 +110,10 @@ function RefreshList(element = null)
         if(el == "Caballero, Janna Lyn Condiman")
             document.querySelector(".student_list").innerHTML += "<hr/>"
 
-        document.querySelector(".student_list").innerHTML += `<p studentButton onclick="StudentClick(this)" data-link="Students/${el}/${activityName}/index.html" >${el}</p>`        
+        document.querySelector(".student_list").innerHTML += `<p studentButton data-link="Students/${el}/${activityName}/index.html" >${el}</p>`        
+    })
+    
+    document.querySelectorAll("[studentButton]").forEach(el=>{
+        el.addEventListener("click", ()=>StudentClick(el))
     })
 }
