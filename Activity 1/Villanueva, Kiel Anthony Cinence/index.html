@@ -1,0 +1,88 @@
+Kiel Anthony Villanueva.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #03f2fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 90vh;
+            margin: 0; 
+        }
+
+        h1 {
+            background-color: #fdfdfd;
+             padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(216, 10, 10, 0.911);
+            text-align: center; /* Center the text horizontally */
+        }
+
+        .color-chart {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #352a2a;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(235, 31, 4);
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .color-box:hover {
+            transform: scale(1.1);
+        }
+
+        /* Center the color chart and title */
+        .color-chart, h1 {
+            margin: auto;
+        }
+
+        /* Define your colors here */
+        .color-box:nth-child(1) { background-color: blue; }
+        .color-box:nth-child(2) { background-color: red; }
+        .color-box:nth-child(3) { background-color: rgb(201, 19, 201); }
+        .color-box:nth-child(4) { background-color: green; }
+        .color-box:nth-child(5) { background-color: tomato; }
+        .color-box:nth-child(6) { background-color: rgb(255, 153, 0); }
+        .color-box:nth-child(7) { background-color: brown; }
+        .color-box:nth-child(8) { background-color: pink;color: black; } /* Change font color for "Pink" */
+        .color-box:nth-child(9) { background-color: rgb(229, 255, 0);color: black; } /* Change font color for "Yellow" */
+        .color-box:nth-child(10) { background-color: gray;}
+    </style>
+</head>
+<body>
+    <h1>Color Chart</h1>
+    <div class="color-chart">
+        <div class="color-box">Blue</div>
+        <div class="color-box">Red</div>
+        <div class="color-box">Violet</div>
+        <div class="color-box">Green</div>
+        <div class="color-box">Tomato</div>
+        <div class="color-box">Orange</div>
+        <div class="color-box">Brown</div>
+        <div class="color-box">Pink</div>
+        <div class="color-box">Yellow</div>
+        <div class="color-box">Gray</div>
+    </div>
+</body>
+</html>

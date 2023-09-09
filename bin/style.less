@@ -22,6 +22,10 @@ body {
         background-color: #202020;
         padding: 20px;
         box-shadow: 0 0 15px 1px black;
+    
+        h1 {
+            font-size: 3vw;
+        }
     }
 
     .MainBody {
@@ -39,6 +43,7 @@ body {
             box-shadow: 0 0 10px 0.1px black;
             background-color: #1e1e1e;
             margin-right: 100px;
+            overflow: hidden;
 
             h5 {
                 margin-right: 20px;
@@ -62,7 +67,7 @@ body {
                 overflow-x: hidden;
                 
                 p {
-                    font-size: 25px;
+                    font-size: 18px;
                     cursor: pointer;
                     padding-left: 10px;
                     padding-top: 10px;
@@ -78,6 +83,10 @@ body {
 
                 :active {
                     background-color: #333333;
+                }
+
+                :focus {
+                    background-color: #838383;
                 }
             }
             
@@ -117,4 +126,8 @@ body {
 
         }
     }
+}
+
+[clicked] {
+    background-color: #838383;
 }
