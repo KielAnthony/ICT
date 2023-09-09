@@ -6,32 +6,49 @@
         <title>Activity 1 - ICT</title>
 
         <style>
-            *{
-                margin: 0;
+            @font-face {
+                font-family: 'DefaultFont';
+                src:  url("../../bin/UDDigiKyokashoN-R.ttc") format('truetype');
             }
 
-            .bg {
+            *{
+                margin: 0;
+                font-family: 'DefaultFont';
+            }
+            
+            .blur_fill
+            {
                 position: fixed;
                 background-image: url("https://wallpaperaccess.com/full/661801.jpg");
                 background-repeat: no-repeat;
                 background-size: cover;
-                height: 100%; 
-                
-                filter: blur(4px);
-                -webkit-filter: blur(4px);
+                filter: blur(5px);
+                -webkit-filter: blur(5px);
+                height: 100%;
+                width: 100%;
             }
 
             .main {
+                position: relative;
                 display: grid;
                 place-items: center;
+                color: white;
+                font-size: 50px;
+            }
+
+            h1 {
+                background-color: #000000A0;
+                width: 100%;
+                text-align: center;
             }
         </style>
 
     </head>
-    <body style="height: 100%;">
-        <div class="bg"></div>
+    <body>
+        <div class="blur_fill"></div>
         <div class="main">
             <img alt="ass" src="https://static.wikia.nocookie.net/dbxfanon/images/b/b5/Gsetaow81g811.png"/>
+            <h1>Work In Progress</h1>
         </div>
     </body>
 </html>

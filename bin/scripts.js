@@ -4,7 +4,7 @@ let ICT_CLASS =
     "Alejaga, Rowin Carl Gravides",
     "Alejandro, Jade Maglaya",
     "Batta, Randy Milo",
-    "Calaguas, Venedick James",
+    "Calaguas, Venedick Janeo",
     "Canonoy, Klyde Dogelio",
     "Cinco, Raven Zabala",
     "Cruz, Hayden  Kyle De Vries",
@@ -35,7 +35,7 @@ let ICT_CLASS =
     "Ventura, Richie Rich Erquiza",
     "Villanueva, Christian Jr. Peruelo",
     "Villanueva, John Ace Durante",
-    "Villanueva, Kiel Anthony Cinence",
+    "Villanueva, Kiel Anthony Cinense",
     
     "Caballero, Janna Lyn Condiman",
     "Castro, Princess Yexa Raiven Ramos",
