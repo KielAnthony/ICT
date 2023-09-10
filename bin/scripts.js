@@ -20,7 +20,7 @@ let ICT_CLASS =
     "Mendoza, Gilsen Maribao",
     "Nabual, John Ray Dibdib",
     "Nora, Prince Eduard Rye Dacara",
-    "Orbiso, Samua Flores",
+    "Orbiso, Samoa Flores",
     "Pepito, Kean James Delapa",
     "Prado, Paul Jefferson Hubila",
     "Rivera, Phaul Richard Turno",
