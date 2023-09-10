@@ -10,7 +10,7 @@ body {
 .colorBackground
 {
     border-radius: 20px;
-    font-size: 25px;
+    font-size: 2vw;
     height: 12vh;
     margin: 2%;
     transition: box-shadow 0.5s;
@@ -46,6 +46,7 @@ body {
     left: 50%;
     top: 15%;
     transform: translate(-50%, -50%);
+    animation: EpicBoxShadow 2s infinite ease-in-out;
 }
 
 .waif
@@ -62,4 +63,16 @@ body {
 
 .waif img {
     opacity: 0.1;
+}
+
+@keyframes EpicBoxShadow {
+    0% {
+        box-shadow: 0 0 10px 1px;
+    }
+    50% {
+        box-shadow: 0 0 30px 1px red;
+    }
+    100% {
+        box-shadow: 0 0 10px 1px;
+    }
 }
