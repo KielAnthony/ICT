@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <title>lmao</title>
+    <style>
+        *
+        {
+            font-family: "JetBrains Mono";
+            font-size: 40px;
+        }
+
+        img
+        {
+            margin-bottom: -25px;
+        }
+
+        h1 {
+            padding-left: 10px;
+        }
+
+        .wa {
+            display: flex;
+            place-items: center;
+        }
+
+        .aswa {
+            border: 5px solid black;
+            padding: 20px;
+        }
+        .FLAGS
+        {
+            z-index: -1;
+            position:relative;
+            float: right;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="wa">
+        <div style="margin: 100px">
+            <div style="display: flexbox;text-align: center;">
+                <h1 style="position:relative; margin-bottom: -10px">NAME:</h1>
+                <input id="name_input" type="text" style="width: 500px;">
+    
+                <h1 style="position:relative; margin-bottom: -10px">(optional) AKA/ALIAS:</h1>
+                <input id="aka_input" type="text" style="width: 500px;">
+    
+                <h1 style="position:relative; margin-bottom: -10px">BIRTHDATE:</h1>
+                <input id="bday_input" type="date" style="width: 500px;text-align: center;">
+    
+                <h1 style="position:relative; margin-bottom: -10px">COUNTRY</h1>
+                <select id="COUNTRY" style="width: 500px; text-align: center;"></select>
+    
+                <h1 style="position:relative; margin-bottom: -10px">FLAG IMAGE</h1>
+                <select id="FLAGSIMG" style="width: 500px; text-align: center;"></select>
+    
+                <h1 style="position:relative; margin-bottom: -10px">KNOWN FOR</h1>
+                <input id="kf_input" type="text" style="width: 500px;">
+            </div>
+            <br/>
+            <div style="display:grid;place-items: center;">
+                <label for="imageinput" style="background-color: #EFEFEF;border: 1px solid black;width:450px; text-align: center;">Add Image</label>
+                <input type="file" name="wa" id="imageinput" style="display:none;" accept="image/*" onchange="inputimage(this)"><br/>
+                <button style="width: 450px;" onclick="apply()">Appply</button><br/>
+                <button style="width: 450px;" onclick="ya()">Download Picture</button><br/>
+            </div>
+        </div>
+        <div class="aswa">
+            <div id="capture" style="height:1590px;width:1360px;">
+                <img id="mainImg" src="default.jpg" height="1360" width="1360">
+                <img class="FLAGS" src="flags/ph.png" height="240">
+                <h1>
+                    NAME: <span id="name"></span> <span id="aka"></span><br/>
+                    BIRTHDATE: <span id="bday"></span><br/> 
+                    LOCATION: <span id="loc"></span><br/>
+                    KNOWN FOR: <span id="kf"></span>
+                </h1>
+            </div>
+        </div>
+        <br>
+        <br/>
+        <br/>
+    </div>
+
+    <script>
+        let listCountries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua & Deps", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Central African Rep", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo", "Costa Rica", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Ivory Coast", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea North", "Korea South", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russian Federation", "Rwanda", "St Kitts & Nevis", "St Lucia", "Saint Vincent & the Grenadines", "Samoa", "San Marino", "Sao Tome & Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe"]
+        let listFlags = ["ad.png","ae.png","af.png","ag.png","ai.png","al.png","am.png","ao.png","aq.png","ar.png","as.png","at.png","au.png","aw.png","ax.png","az.png","ba.png","bb.png","bd.png","be.png","bf.png","bg.png","bh.png","bi.png","bj.png","bl.png","bm.png","bn.png","bo.png","bq.png","br.png","bs.png","bt.png","bv.png","bw.png","by.png","bz.png","ca.png","cc.png","cd.png","cf.png","cg.png","ch.png","ci.png","ck.png","cl.png","cm.png","cn.png","co.png","cr.png","cu.png","cv.png","cw.png","cx.png","cy.png","cz.png","de.png","dj.png","dk.png","dm.png","do.png","dz.png","ec.png","ee.png","eg.png","eh.png","er.png","es.png","et.png","fi.png","fj.png","fk.png","fm.png","fo.png","fr.png","ga.png","gb-eng.png","gb-nir.png","gb-sct.png","gb-wls.png","gb.png","gd.png","ge.png","gf.png","gg.png","gh.png","gi.png","gl.png","gm.png","gn.png","gp.png","gq.png","gr.png","gs.png","gt.png","gu.png","gw.png","gy.png","hk.png","hm.png","hn.png","hr.png","ht.png","hu.png","id.png","ie.png","il.png","im.png","in.png","io.png","iq.png","ir.png","is.png","it.png","je.png","jm.png","jo.png","jp.png","ke.png","kg.png","kh.png","ki.png","km.png","kn.png","kp.png","kr.png","kw.png","ky.png","kz.png","la.png","lb.png","lc.png","li.png","lk.png","lr.png","ls.png","lt.png","lu.png","lv.png","ly.png","ma.png","mc.png","md.png","me.png","mf.png","mg.png","mh.png","mk.png","ml.png","mm.png","mn.png","mo.png","mp.png","mq.png","mr.png","ms.png","mt.png","mu.png","mv.png","mw.png","mx.png","my.png","mz.png","na.png","nc.png","ne.png","nf.png","ng.png","ni.png","nl.png","no.png","np.png","nr.png","nu.png","nz.png","om.png","pa.png","pe.png","pf.png","pg.png","ph.png","pk.png","pl.png","pm.png","pn.png","pr.png","ps.png","pt.png","pw.png","py.png","qa.png","re.png","ro.png","rs.png","ru.png","rw.png","sa.png","sb.png","sc.png","sd.png","se.png","sg.png","sh.png","si.png","sj.png","sk.png","sl.png","sm.png","sn.png","so.png","sr.png","ss.png","st.png","sv.png","sx.png","sy.png","sz.png","tc.png","td.png","tf.png","tg.png","th.png","tj.png","tk.png","tl.png","tm.png","tn.png","to.png","tr.png","tt.png","tv.png","tw.png","tz.png","ua.png","ug.png","um.png","us.png","uy.png","uz.png","va.png","vc.png","ve.png","vg.png","vi.png","vn.png","vu.png","wf.png","ws.png","xk.png","ye.png","yt.png","za.png","zm.png","zw.png"]
+
+        listCountries.forEach(names=>{
+            let template = `<option id="${names}">${names}</option>`
+
+            if(names == "Philippines")
+                template = `<option id="${names}" selected="${names}">${names}</option>`
+
+            document.querySelector("#COUNTRY").innerHTML += template
+        })
+
+        listFlags.forEach(names=>{
+            let template = `<option id="${names}">${names}</option>`
+
+            if(names == "ph.png")
+                template = `<option id="${names}" selected="${names}">${names}</option>`
+
+            document.querySelector("#FLAGSIMG").innerHTML += template
+        })
+
+        function apply()
+        {
+            document.querySelector("#name").textContent = document.querySelector("#name_input").value.toUpperCase()
+            document.querySelector("#loc").textContent = document.querySelector("#COUNTRY").value.toUpperCase()
+            document.querySelector("#kf").textContent = document.querySelector("#kf_input").value.toUpperCase()
+            document.querySelector(".FLAGS").src = `flags/${document.querySelector("#FLAGSIMG").value}`
+
+            let aka = document.querySelector("#aka_input").value;
+            if(aka != "")
+                document.querySelector("#aka").textContent = `(aka: ${aka})`
+            else document.querySelector("#aka").textContent = ""
+
+            document.querySelector("#bday").textContent = bday()
+
+        }
+
+        function ya()
+        {
+            html2canvas(document.querySelector("#capture")).then(canvas => {
+                var link=document.createElement('a')
+                link.download = `${document.getElementById("name").innerHTML}.png`
+                link.href=canvas.toDataURL("image/png")
+                link.click()
+            });
+        }
+
+        function bday()
+        {
+            let date = new Date(document.querySelector("#bday_input").value)
+
+            return `${date.toLocaleString('default', { month: 'long'}).toUpperCase()} ${date.getDate()}, ${date.getFullYear()}`
+        }
+
+        function inputimage(obj)
+        {
+            let reader = new FileReader()
+            reader.readAsDataURL(obj.files[0])
+            reader.onload = (e) =>{
+                sessionStorage.setItem("imgData", reader.result)
+                
+                let image = new Image()
+
+                image.src = e.target.result
+                image.onload = ()=>{
+                    document.querySelector("#mainImg").src = image.src
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>
