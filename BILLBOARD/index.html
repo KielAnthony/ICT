@@ -17,10 +17,6 @@
             margin-bottom: -25px;
         }
 
-        h1 {
-            padding-left: 10px;
-        }
-
         .wa {
             display: flex;
             place-items: center;
@@ -70,10 +66,12 @@
             </div>
         </div>
         <div class="aswa">
-            <div id="capture" style="height:1590px;width:1360px;">
-                <img id="mainImg" src="default.jpg" height="1360" width="1360">
-                <img class="FLAGS" src="flags/ph.png" height="240">
-                <h1>
+            <div id="capture" style="height:1590px;width:1360px;white-space: nowrap;overflow: hidden;">
+                <div style="text-align: center;margin:0">
+                    <img id="mainImg" src="default.jpg" height="1360" style="object-fit: cover;">
+                </div>
+                <img class="FLAGS" src="flags/ph.png" height="240" style="padding-top: 12.5px">
+                <h1 style="padding-left: 10px;">
                     NAME: <span id="name"></span> <span id="aka"></span><br/>
                     BIRTHDATE: <span id="bday"></span><br/> 
                     LOCATION: <span id="loc"></span><br/>
