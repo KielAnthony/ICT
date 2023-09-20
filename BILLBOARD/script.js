@@ -27,6 +27,7 @@ function apply()
 {
     document.querySelector("#name").textContent = document.querySelector("#name_input").value.toUpperCase()
     document.querySelector("#kf").textContent = document.querySelector("#kf_input").value.toUpperCase()
+    document.querySelector("#loc").textContent = document.querySelector("#loc_input").value.toUpperCase()
 
     let aka = document.querySelector("#aka_input").value;
     if(aka != "")

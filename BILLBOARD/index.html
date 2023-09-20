@@ -4,40 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>    <link rel="stylesheet" href="sty.css">
     <title>lmao</title>
-    <style>
-        @font-face {
-            font-family: "defaultFont";
-            src: url("font.TTF");
-        }
-        *
-        {
-            font-family: "defaultFont";
-            font-size: 40px;
-        }
-
-        img
-        {
-            margin-bottom: -25px;
-        }
-
-        .wa {
-            display: flex;
-            place-items: center;
-        }
-
-        .aswa {
-            border: 5px solid black;
-            padding: 20px;
-        }
-        .FLAGS
-        {
-            z-index: -1;
-            position:relative;
-            float: right;
-            opacity: 0.5;
-        }
-    </style>
 </head>
 <body>
     <h1>ICT BILLBOARD PICTURE GENERATOR?!?</h1>
@@ -54,9 +22,12 @@
                 <input id="bday_input" type="date" style="width: 500px;text-align: center;">
     
                 <h1 style="position:relative; margin-bottom: -10px">COUNTRY</h1>
-                <select id="COUNTRY" onchange="countryChanged(this)" style="width: 500px; text-align: center;"></select>
-    
-                <h1 style="position:relative; margin-bottom: -10px">KNOWN FOR</h1>
+                <select disabled id="COUNTRY" onchange="countryChanged(this)" style="width: 500px; text-align: center;"></select>
+                
+                <h1 style="position:relative; margin-bottom: -10px">ADDRESS<br/>(DONT INCLUDE HOUSE NUMBER)</h1>
+                <input id="loc_input" type="text" style="width: 500px;">
+
+                <h1 style="position:relative; margin-bottom: -10px">CRIMES</h1>
                 <input id="kf_input" type="text" style="width: 500px;">
             </div>
             <br/>
@@ -77,7 +48,7 @@
                     NAME: <span id="name"></span> <span id="aka"></span><br/>
                     BIRTHDATE: <span id="bday"></span><br/> 
                     LOCATION: <span id="loc"></span><br/>
-                    KNOWN FOR: <span id="kf"></span>
+                    CRIMES: <span id="kf"></span>
                 </h1>
             </div>
         </div>
@@ -85,6 +56,11 @@
         <br/>
         <br/>
     </div>
+
+    <br/>
+    <h1>1. FILL THE BOXES LIKE NAMES, BIRTHDATE, ADDRESS, AND CRIMES</h1>
+    <h1>2. SELECT YOUR PICTURE TO BE USED.</h1>
+    <h1>3. DOWNLOAD THE PHOTO AND SEND IT TO PEPITO</h1>
 
     <script src="lists.js"></script>
     <script src="script.js"></script>

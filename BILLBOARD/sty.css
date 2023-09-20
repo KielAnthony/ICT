@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "defaultFont";
+    src: url("font.TTF");
+}
+*
+{
+    font-family: "defaultFont";
+    font-size: 40px;
+}
+
+#mainImg
+{
+    margin-bottom: -25px;
+}
+
+.wa {
+    display: flex;
+    place-items: center;
+}
+
+.aswa {
+    border: 5px solid black;
+    padding: 20px;
+}
+.FLAGS
+{
+    z-index: -1;
+    position:relative;
+    float: right;
+    opacity: 0.5;
+}
