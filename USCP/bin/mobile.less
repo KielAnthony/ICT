@@ -1,0 +1,78 @@
+@media screen and (max-width: 1000px) {
+    .rightNav {
+        display: none;
+    }
+    .selectableSection {
+        width: 68.5vw;
+    }
+    .mobileSelectionButton {
+        display: block !important;
+    }
+    .mobileNavigation {
+        display: block !important;
+    }
+}
+
+.mobileSelectionButton {
+    display: none;
+    position: absolute;
+    left: 85%;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+.mobileSelectionButton:hover {
+    background-color: rgba(0, 0, 0, 0.093);
+}
+
+.mobileNavigation {
+    display: none;
+    overflow: hidden;
+    margin: 5vw 0vw 0vw 0vw;
+    font-size: 1vw;
+    text-align: center;
+    position: relative;
+    transition: top 0.35s;
+    top: -1000px;
+
+    .mnav {
+        position: fixed;
+        display: block;
+        background-color: rgb(143, 132, 99);
+        height: 100%;
+        width: 100%;
+        padding-top: 80px;
+        z-index: 88;
+
+        div {
+            position: relative;
+            background-color: rgba(255, 211, 78, 0.436);
+            border-radius: 2vw;
+            padding: 1vw;
+            margin: 10px 40px 10px 40px;
+            height: 100px;
+            user-select: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 40px;
+            }
+        }
+    
+        div:hover {
+            background-color: rgba(255, 211, 78);
+        }
+        
+
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            color: rgb(250, 164, 180);
+            text-shadow: 1px 1px 5px black;
+        }
+    }
+}
