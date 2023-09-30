@@ -8,8 +8,13 @@
     font-family: 'DefaultFont';
 }
 
+html {
+    min-height: 100vh;
+}
+
 body {
     background-color: rgb(240, 229, 196);
+    bottom: 100px;
 }
 
 .mainHeader {
@@ -22,6 +27,7 @@ body {
     top: 0px;
     width: 100vw;
     z-index: 99;
+    overflow: hidden;
 
     nav {
         display: flex;
@@ -120,4 +126,28 @@ body {
 .selectableSection:hover {
     background-color: rgba(143, 132, 99);
     box-shadow: 0 0 10px 1px black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(104, 93, 63);
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 1vw;
+    box-shadow: 0px 5px 5px inset rgba(50, 50, 50, 0.75);
+    // -moz-box-shadow: 0px -4px 3px inset rgba(50, 50, 50, 0.75);
+    // -webkit-box-shadow: 0px -4px 3px inset rgba(50, 50, 50, 0.75);
+
+
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        color: rgb(200, 135, 147);
+        text-shadow: 1px 1px 5px black;
+    }
 }
