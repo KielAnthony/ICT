@@ -3,6 +3,10 @@
     src:  url("../../bin/UDDigiKyokashoN-R.ttc") format('truetype');
 }
 
+[removeList] {
+    display: none !important;
+}
+
 * {
     margin: 0;
     font-family: 'DefaultFont';
@@ -30,7 +34,9 @@ body {
         place-items: center;
         font-size: 1.5vw;
         text-shadow: -3px 3px 2px gray;
-
+        pointer-events: none;
+        user-select: none;
+        
         img {
             height: 5vw;
             filter: drop-shadow(0px 0px 5px black);
@@ -61,7 +67,7 @@ body {
     height: fit-content;
     font-size: 1vw;
 
-    div {
+    [navButton] {
         background-color: rgba(255, 211, 78, 0.436);
         border-radius: 0.5vw;
         padding: 1vw;
@@ -71,7 +77,7 @@ body {
         transition: background-color 0.2s;
     }
 
-    div:hover {
+    [navButton]:hover {
         background-color: rgba(255, 211, 78);
     }
 
@@ -94,8 +100,9 @@ body {
     border-radius: 0.5vw;
     background-color: rgba(143, 132, 99, 0.456);
     user-select: none;
-    transition: all 0.2s;
+    overflow: hidden;
     cursor: pointer;
+    transition: all 0.2s;
     
     .sectionHeader {
         margin: 1vw 0 0 1vw;
@@ -103,6 +110,10 @@ body {
 
         h1 {
             font-size: 2.5vw;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 35vw;
         }
 
         .preText {
@@ -136,8 +147,8 @@ footer {
     padding-bottom: 1vw;
     font-size: 1vw;
     box-shadow: 0px 0.2vw 0.2vw inset rgba(50, 50, 50, 0.75);
-    // -moz-box-shadow: 0px -4px 3px inset rgba(50, 50, 50, 0.75);
-    // -webkit-box-shadow: 0px -4px 3px inset rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 0.2vw 0.2vw inset rgba(50, 50, 50, 0.75);
+    -webkit-box-shadow: 0px 0.2vw 0.2vw inset rgba(50, 50, 50, 0.75);
 
 
     a {
@@ -146,4 +157,28 @@ footer {
         color: rgb(200, 135, 147);
         text-shadow: 1px 1px 5px black;
     }
+}
+
+input[name="search"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    width: 70%;
+    font-size: 2vw;
+    outline: none;
+}
+
+input[name="search"]::placeholder {
+    color: black;
+    opacity: 0.8;
+    background-image: url("search.svg");
+    background-repeat: no-repeat;
+    background-size: 1.2vw;
+    font-size: 1.2vw;
+    position: relative;
+    bottom: 0.2vw;
+}
+
+[homeVideo] {
+    box-shadow: 0 0 0.5vw 0.01vw black;
 }

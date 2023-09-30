@@ -3,7 +3,7 @@
         display: none;
     }
     .selectableSection {
-        width: 68.5vw;
+        width: 75vw;
     }
     .mobileSelectionButton {
         display: block !important;
@@ -22,6 +22,18 @@
             display: none;
         }
     }
+    [homeVideo] {
+        width: 75vw !important;
+    }
+    input[name="search"] {
+        font-size: 7vw;
+    }
+    input[name="search"]::placeholder {
+        font-size: 3vw;
+        background-size: 3vw;
+        bottom: 1.5vw;
+        text-align: center;
+    }
 }
 
 .mobileSelectionButton {
@@ -29,6 +41,7 @@
     position: absolute;
     left: 85%;
     border-radius: 0.5vw;
+    pointer-events: auto;
     cursor: pointer;
 }
 
@@ -57,7 +70,7 @@
 
         .spanText {
             position: relative;
-            top: 20vw;
+            top: 10vw;
             font-size: 3vw;
         }
 

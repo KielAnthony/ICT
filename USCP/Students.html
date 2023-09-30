@@ -23,12 +23,13 @@
         <meta name="twitter:description" content="Grade-11 ICT Blogs." />
         <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/en/thumb/3/39/Holy_Trinity_Academy_seal.svg/1200px-Holy_Trinity_Academy_seal.svg.png" />
 
-        <link rel="stylesheet/less" href="./bin/main.less" type="text/css" preload>
-        <link rel="stylesheet/less" href="./bin/mobile.less" type="text/css" preload>
+        <link rel="stylesheet/less" href="./bin/main.less" type="text/css">
+        <link rel="stylesheet/less" href="./bin/mobile.less" type="text/css">
         <script src="https://cdn.jsdelivr.net/npm/less@4.1.1" defer></script>
         
         <!-- My own library :P -->
         <script src="https://rawcdn.githack.com/IchimakiKasura/ichimakikasura.github.io/990dfa042563af01e8b2f54388838a78c37023dc/Old2/Old/js/kasu-beta-2.0.oc.mini.js"></script>
+        <script src="bin/students.js"></script>
         
         <title>USCP - GRADE-11 ICT</title>
     </head>
@@ -47,6 +48,7 @@
 
         <div class="mobileNavigation">
             <div class="mnav">
+                <input onkeyup="checkStudents(this)" name="search" type="text" placeholder="   FIND STUDENT..." spellcheck="false">
                 <div onclick="window.location.href='./index.html'"><span>Home</span></div>
                 <div onclick="window.location.href='./Students.html'"><span>Student Lists</span></div>
                 <div onclick="window.location.href='./About.html'"><span>About</span></div>
@@ -73,9 +75,10 @@
                     <!-- articles -->
                 </div>
                 <div class="rightNav">
-                    <div onclick="window.location.href='./index.html'">Home</div>
-                    <div onclick="window.location.href='./Students.html'">Student Lists</div>
-                    <div onclick="window.location.href='./About.html'">About</div>
+                    <input onkeyup="checkStudents(this)" name="search" type="text" placeholder="   FIND STUDENT..." spellcheck="false">
+                    <div navButton onclick="window.location.href='./index.html'">Home</div>
+                    <div navButton onclick="window.location.href='./Students.html'">Student Lists</div>
+                    <div navButton onclick="window.location.href='./About.html'">About</div>
                     <br/>
                     <span>
                         <i>Teacher:</i><br/>
@@ -85,7 +88,6 @@
                         <br/>
                         <i>Designed by</i><br/>
                         <a title="Ichimaki Kasura portfolio" href="https://ichimakikasura.github.io">Ichimaki Kasura</a>
-                        
                     </span>
                 </div>
             </div>
@@ -99,22 +101,7 @@
             <p>Pictures and Videos used belongs to their respective owners.</p>
         </footer>
         
-        <script>
-            for (let i = 1; i <= 50; i++) {
-                document.querySelector(".selection").innerHTML +=
-                `
-                <article class="selectableSection">
-                        <img src="https://media.istockphoto.com/id/1096052566/vector/stamprsimp2red.jpg?s=612x612&w=0&k=20&c=KVu0nVz7ZLbZsRsx81VBZcuXZ1MlEmLk9IQabO2GkYo=">
-                        <div class="sectionHeader">
-                            <h1>Sample student name #${i}</h1>
-                            <div class="preText">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>                
-                    </article>
-                `
-            }
-        </script>
+        <script src="bin/studentScript.js"></script>
         <script src="bin/scripts.js"></script>
     </body>
 
