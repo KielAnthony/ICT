@@ -46,3 +46,7 @@ const ICT_CLASS =
     "Sto. Domingo, Ma. Sophia Lorrainne Almodal",
     "Ubilas, Veronica Wambangco"
 ]
+
+const LATE_STUDENTS = [
+    
+];
