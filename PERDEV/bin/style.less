@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'DefaultFont';
+    src:  url("../../bin/UDDigiKyokashoN-R.ttc") format('truetype');
+}
+
+* {
+    margin: 0px;
+    font-family: 'DefaultFont';
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.mainNav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    z-index: 2;
+
+    .navButton {
+        padding: 20px;
+        margin: 1vw;
+        width: 20vw;
+        font-size: 2.5vw;
+        text-align: center;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .navButton:hover {
+        background-color: rgba(100,100,100,0.5)
+    }
+
+    transition: all 0.2s;
+}
+
+.bgMe {
+    position: fixed;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 200vh;
+    background-position: center 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.mainPfp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-bottom: -170px;
+
+    img {
+        box-shadow: 0 0 1vw 0.1vw black;
+        position: absolute;
+        border-radius: 100%;
+        height: 25%;
+        transition: opacity 1s;
+    }
+
+    [secretHover] {
+        opacity: 0;
+    }
+
+    [secretHover]:hover {
+        opacity: 1;
+        box-shadow: 0 0 1vw 0.1vw rgba(97, 0, 0, 0.8);
+    }
+}
+
+#homeSection {
+    background-color: rgba(0,0,0,0.5);
+    height: 105vh;
+
+    .mainText {
+        text-align: center;
+    }
+}
+
+#aboutSection {
+    z-index: 2;
+    background-color: rgb(14, 14, 16);
+    max-height: auto;
+    box-shadow: 0 0 1vw 1vw rgb(14, 14, 16);
+    padding: 1vw;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    
+
+    .whoami {
+        display: flex;
+        padding-top: 5vw;
+        font-size: 1.5rem;
+        text-align: left;
+        
+        img {
+            border-radius: 0.5rem;
+        }
+    }
+
+    video {
+        width: 65vw;
+        border-radius: 1rem;
+        box-shadow: 0 0 2rem 0.1rem rgba(128, 128, 128, 0.2);
+    }
+
+    .songList {
+        display:grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .aboutMe {
+        img {
+            height: 15vw;
+        }
+
+        .collage {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            
+            img {
+                float: left;
+                height: 15vw;
+                margin: 0.66%;
+                box-shadow: 0 0 1vw 1px rgba(128, 128, 128, 0.2);
+            }
+
+            img:nth-child(1)
+            {
+                border-radius: 1rem 0 0 0;
+            }
+            img:nth-child(2)
+            {
+                border-radius: 0 1rem 0 0;
+            }
+            img:nth-child(3)
+            {
+                border-radius: 0 0 0 1rem;
+            }
+            img:nth-child(4)
+            {
+                border-radius: 0 0 1rem 0;
+            }
+        }
+    }
+
+}
+
+#contactSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    div div {
+        display: flex;
+        padding: 1rem;
+    }
+
+    img {
+        height: 2rem;
+    }
+
+    p {
+        color: black;
+    }
+}

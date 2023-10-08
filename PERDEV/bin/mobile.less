@@ -1,0 +1,69 @@
+@media screen and (max-width: 650px) {
+    #aboutSection {
+        height: auto;
+        padding-bottom: 2rem;
+
+        [who] {
+            font-size: 15vw !important;
+        }
+
+        video {
+            width: 70vw;
+            border-radius: 1rem;
+            box-shadow: 0 0 2rem 0.1rem rgba(128, 128, 128, 0.2);
+        }
+
+        .whoami {
+            justify-content: center;
+            text-align: center !important;
+            flex-wrap: wrap;
+            padding-top: 5vw;
+    
+            img {
+                height: 15rem !important;
+                margin-bottom: 2rem !important;
+                margin: 0 !important;
+                margin-bottom: 2rem !important;
+            }
+        }
+
+        .aboutMe {
+            .collage {
+                img {
+                    height: 35vw;
+                }
+                img:nth-child(1)
+                {
+                    border-radius: 1rem 1rem 0 0;
+                }
+                img:nth-child(2)
+                {
+                    border-radius: 0 0 0 0 !important;
+                }
+                img:nth-child(3)
+                {
+                    border-radius: 0 0 0 0 !important;
+                }
+                img:nth-child(4)
+                {
+                    border-radius: 0 0 1rem 1rem;
+                }
+            }
+        }
+    }
+    .navButton {
+        font-size: 5vw !important;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #aboutSection {
+        .songList {
+            display: block;
+    
+            audio {
+                margin-bottom: 5rem !important;
+            }
+        }
+    }
+}
