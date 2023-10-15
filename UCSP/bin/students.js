@@ -26,7 +26,7 @@ const ICT_CLASS =
     },
     {
         Name: "Cruz, Hayden  Kyle De Vries",
-        Content: "No Information Given"
+        Content: "UNDERSTANDING CULTURE, SOCIAL AND POLIITCS Ethnocentrism in social science and anthropology—as well as in colloquial English discourse—means to apply one's own culture or ethnicity as a frame of reference to judge other cultures, practices, behaviors, beliefs, and people, instead of using the standards of the particular culture involved. ICultural relativism is the idea that a person's beliefs and practices should be understood based on that person's own culture. Proponents of cultural relativism also tend to argue that the norms and values of one culture should not be evaluated using the norms and values of another."
     },
     {
         Name: "Dimaano, Kyle john  Ashley Endaya",
@@ -126,7 +126,7 @@ const ICT_CLASS =
     },
     {
         Name: "Ventura, Richie Rich Erquiza",
-        Content: "No Information Given"
+        Content: "This course uses insights from Anthropology, Political Science, and Sociology to develop students' awareness of cultural, social and political dynamics, and sensitivity to cultural diversity provide them with an understanding of how culture, human agency, society and politics work; and engage them in the examination. The set of distinctive spritual, material, intellectual and emotional features of society or a social group that encompasses not only art also literature but lifestyles, ways of living together, value systems, traditions and beliefs. The set of values, conventions, or social practices associated with a particular field, activity, or societal characteristic"
     },
     {
         Name: "Villanueva, Christian Jr. Peruelo",
