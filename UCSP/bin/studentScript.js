@@ -1,5 +1,6 @@
 for (let i = 0; i < ICT_CLASS.length; i++) {
-    let name = ICT_CLASS[i]
+    let name = ICT_CLASS[i].Name
+    let content = ICT_CLASS[i].Content
     let lateStudent = ""
 
     LATE_STUDENTS.forEach(el=>
@@ -15,7 +16,7 @@ for (let i = 0; i < ICT_CLASS.length; i++) {
         <div class="sectionHeader">
             <h1>${name}</h1>
             <div class="preText">
-                No information given.
+                ${content}
             </div>
         </div>                
     </article>
