@@ -2,17 +2,21 @@ for (let i = 0; i < ICT_CLASS.length; i++) {
     let name = ICT_CLASS[i].Name
     let content = ICT_CLASS[i].Content
     let lateStudent = ""
+    let img = "https://upload.wikimedia.org/wikipedia/commons/3/3c/No_Essay.svg"
 
     LATE_STUDENTS.forEach(el=>
         {
             if(name == el) lateStudent = "lateStudent"
         }
     )
+
+    if(ICT_CLASS[i].image != "")
+        img = ICT_CLASS[i].image
     
     document.querySelector(".selection").innerHTML +=
     `
     <article ${lateStudent} id="studentList" class="selectableSection" onclick="openStudent('${name}')">
-        <img src="https://masaolms.carsu.edu.ph/pluginfile.php/200458/course/summary/culture-awareness-training.jpg">
+        <img src="${img}">
         <div class="sectionHeader">
             <h1>${name}</h1>
             <div class="preText">

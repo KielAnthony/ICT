@@ -1,0 +1,16 @@
+@font-face {
+    font-family:"Kursive";
+    src: url("BRUSHSCI.ttf") format('truetype');
+}
+@font-face {
+    font-family:"Pretty";
+    src: url("Pretty\ Script.otf") format('truetype');
+}
+@font-face {
+    font-family:"Beepo";
+    src: url("Beepo-SemiBold.ttf") format('truetype');
+}
+@font-face {
+    font-family:"Patua";
+    src: url("PatuaOne-Regular.ttf") format('truetype');
+}
