@@ -1,11 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NO SUBMISSION</title>
+<title>  </title>
+<style>
+    .Background{
+   height:100%;
+   width:99%;     background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSymaHQSqApztQFaClhEEX3BTiZeRVcxJ3jA&usqp=CAU");
+    background-repeat:no-repeat;
+    background-size:cover;
+    }
+    .parent{
+    height:270px;
+    width:55%;
+    position:relative;
+    left:21.5%;
+    top:120px;
+    box-shadow:20px 20px 50px rgba(0,0,0,0.5);
+    background-color:rgba(255,255,255,0.3);
+border-top:1.5px solid rgba(255,255,255,0.5);
+border-left:1.5px solid rgba(255,255,255,0.5);
+backdrop-filter:blur(10px);
+}
+    .btn1{
+    height:50px;
+    width:125px;
+    position:absolute;
+    left:38%;
+    top:40%;
+    border-radius:20px;
+    color:#00FCFF;
+    border:2px solid #00FCFF;
+    transition:1s;
+    background-color:transparent;
+    }
+    
+    .btn1:hover{
+    box-shadow:0px 0px 20px rgba(0,252,255);
+    color:#00FCFF;
+    background-color:transparent;
+    text-shadow:0px 0px 10px rgba(0,252,255);
+    transform:rotateX(360deg);
+    }
+    
+    .content{
+    height:0px;
+    width:100%;
+    text-align:center;
+    background-color:yellow;
+    transition:1s;
+    color:red;
+    font-family:courier;
+    font-size:0px;
+    }
+    
+    
+    
+    .mea{
+    height:0px;
+    width:130px;
+    border:1px solid #00EEFF;
+    display:none;
+    position:absolute;
+    top:-60px;
+    font-size:0px; 
+    color:black;
+    transition:1s;
+    border-radius:13px;
+    color:#00FCFF;
+    background-color:transparent;
+    }
+    .mea:hover{
+    box-shadow:0px 0px 20px rgba(0,252,255);
+    color:#00FCFF;
+    background-color:transparent;
+    text-shadow:0px 0px 10px rgba(0,252,255);
+    }
+  
+    
+    
+</style>
 </head>
-<body>
-    <h1>NO PETA SUBMITTED</h1>
+<body class="Background">
+    <div class="parent" id="parenti">
+  <button class="btn1" id="25" onclick="btn()"><b>Open</b></button>
+  <button class="mea" onclick="btn3()" id="78">
+    <b>  Cultural relativism </b>
+      
+      
+  </button>
+   <div class="content" id="content">ETHNOCENTRISM and CULTURAL RELATIVISM
+   
+   <p class="Meaning" id="11">
+       Ethnocentrism Refers to the attitude that ones own group, ethnicity, or nationality is superior to others.
+       
+       
+   </p>
+
+    
+    
+    
+</p>
+
+</div>
+        
+        
+    </div>
+<script>
+    function wait() {
+    return new Promise((resolve) => {
+    setTimeout(resolve,1000)})
+    }
+    
+async function btn(){
+ 
+    let x = document.getElementById("content");
+    let y = document.getElementById("25");
+    if(x.offsetHeight === 0){
+    x.style.color = 'black';
+    x.style.height = '100%';
+    y.style.top = '-25%';
+    x.style.fontSize = '20px';
+    y.innerHTML = "<b> Close </b>";  
+    document.getElementById("78").style.display = 'block';
+    await wait(); document.getElementById("78").style.height = '38px';
+    document.getElementById("78").style.fontSize = '12px';
+    
+    
+    } else{
+    x.style.height = '0';
+    y.style.top = '40%';
+    x.style.color = 'transparent'
+    y.innerHTML = "<b> Open </b>";
+    
+        document.getElementById("78").style.fontSize = '0px'; 
+   document.getElementById("78").style.height = '0px';
+   await wait();  document.getElementById("78").style.display = 'none';
+
+    }
+  }
+  
+    function btn3(){
+    let m1 = 'Ethnocentrism Refers to the attitude that ones own group, ethnicity, or nationality is superior to others.';
+    
+    let m2 = 'Cultural relativism is not judging a culture to our own standards of what is right or wrong, strange or normal.';
+    
+        let x = document.getElementById("11")
+        let y = document.getElementById("78")  
+        if(x.innerHTML === m1){
+x.innerHTML = 'Cultural relativism is not judging a culture to our own standards of what is right or wrong, strange or normal.';
+y.innerHTML = '<b>Ethnocentrism</b>';
+       
+ } else{
+       x.innerHTML = 'Ethnocentrism Refers to the attitude that ones own group, ethnicity, or nationality is superior to others.';
+y.innerHTML = '<b> Cultural Relativism</b>';
+       
+        
+     }
+    }
+    
+    
+    
+    
+</script>
 </body>
 </html>

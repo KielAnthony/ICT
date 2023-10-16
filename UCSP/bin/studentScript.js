@@ -23,7 +23,19 @@ for (let i = 0; i < ICT_CLASS.length; i++) {
     `
 }
 
+(()=> {
+    let StudentPassedPeta = 0;
+    
+    ICT_CLASS.forEach(el => {
+        if(el.Content != "No Information Given")
+            StudentPassedPeta++;
+    })
+    
+    document.querySelector("#numberOfStudents").innerHTML = `Student who passed the Peta: ${StudentPassedPeta}`
+})()
+
 function checkStudents(elem) {
+
     document.querySelectorAll("#studentList").forEach(el => {
         let selectedStudent = el.children[1].children[0].textContent.toLowerCase();
 

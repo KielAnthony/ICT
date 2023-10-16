@@ -10,7 +10,7 @@ const ICT_CLASS =
     },
     {
         Name: "Batta, Randy Milo",
-        Content: "No Information Given"
+        Content: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat."
     },
     {
         Name: "Calaguas, Venedick Janeo",
@@ -30,7 +30,7 @@ const ICT_CLASS =
     },
     {
         Name: "Dimaano, Kyle john  Ashley Endaya",
-        Content: "No Information Given"
+        Content: "Ethnocentrism is a concept that describes the tendency of individuals or groups to view their own culture as superior to others. It involves judging and evaluating other cultures and belief systems based on the standards and values of one's own culture. This can lead to a biased or distorted perspective on other societies and can have both positive and negative implications in intercultural interactions. Recognizing and understanding ethnocentrism is crucial for promoting cultural sensitivity and fostering harmonious relationships in our diverse and interconnected world."
     },
     {
         Name: "Dimayuga, Rafael Leonardo Barredo",
@@ -38,7 +38,7 @@ const ICT_CLASS =
     },
     {
         Name: "Escomen, Arped Jey titong",
-        Content: "No Information Given"
+        Content: "Ethnocentrism Refers to the attitude that ones own group, ethnicity, or nationality is superior to others. Cultural relativism is not judging a culture to our own standards of what is right or wrong, strange or normal."
     },
     {
         Name: "Espinosa, Christian Subere",
@@ -62,7 +62,7 @@ const ICT_CLASS =
     },
     {
         Name: "Lumpay, Shane Harvey Duavis",
-        Content: "No Information Given"
+        Content: "Empowerment through Understanding: Gender and Sexuality Education Gender and sexuality are complex and diverse aspects of human identity, encompassing a wide range of experiences and expressions that are deeply intertwined with culture, society, and individual self-identification. Both gender and sexuality are deeply personal and can play a significant role in shaping an individual's sense of self and identity."
     },
     {
         Name: "Magat, Aldrian Cedrick Olipano",
@@ -170,7 +170,7 @@ const ICT_CLASS =
     },
     {
         Name: "Sto. Domingo, Ma. Sophia Lorrainne Almodal",
-        Content: "No Information Given"
+        Content: "Understanding Culture, Society, and Politics uses multidisciplinal insights from anthropology, political science, and sociology to develop student awareness of cultural, social, and political dynamics and sensitivity to cultural diversity. Culture is a a word for the 'way of life' of groups of people, meaning the way they do things.\"Excellence of taste in the fine arts and humanities\" also known as high culture. An integrated pattern of human knowledge, belief, and behavior."
     },
     {
         Name: "Ubilas, Veronica Wambangco",
