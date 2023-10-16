@@ -58,7 +58,7 @@ const ICT_CLASS =
     },
     {
         Name: "Javier, Mark Augustine Pagente",
-        Content: "No Information Given"
+        Content: "An understanding of culture requires an understanding not only of language differences, but also differences in knowledge, perceptions, beliefs, attitudes, and behaviors. Culture (from the Latin cultura stemming from colere, meaning \"to cultivate\") generally refers to patterns of human activity and the symbolic structures that give such activities significance and importance. Cultures can be \"understood as systems of symbols and meanings that even their creators contest, that lack fixed boundaries, that are constantly in flux, and that interact and compet e with one another.\""
     },
     {
         Name: "Lumpay, Shane Harvey Duavis",
@@ -162,7 +162,7 @@ const ICT_CLASS =
     },
     {
         Name: "Malacama, Jillian Marie Semfranca",
-        Content: "No Information Given"
+        Content: "Understanding Culture and ICT PETA Q1 Ma'am Jane and Sir Charles Collab Lesson 1 Politics (Polis) The set of activities that are associated with making decisions in groups, or other forms of power relations among individuals such as the distribution of resources or status. The branch of social branch of social science that studies  olitics and government is referred to as political science. Society (Societas) A large group of people who live together in an organized way making decisions about how to do things and sharing the work that needs to be done. Culture (Cultura) The customary beliefs, social forms , and material traits of a racial, religious, or social group."
     },
     {
         Name: "Sto. Domingo, Ma. Raine Conception",
@@ -179,5 +179,5 @@ const ICT_CLASS =
 ]
 
 const LATE_STUDENTS = [
-    
+
 ];
