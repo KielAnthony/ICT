@@ -10,8 +10,12 @@ for (let i = 0; i < ICT_CLASS.length; i++) {
         }
     )
 
-    if(ICT_CLASS[i].image != "")
+    if(ICT_CLASS[i].image != "")    
         img = ICT_CLASS[i].image
+    else
+        // added after 8:00pm on October 16, 2023
+        lateStudent = "lateStudent"
+    
     
     document.querySelector(".selection").innerHTML +=
     `

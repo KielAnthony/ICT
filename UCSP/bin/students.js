@@ -177,8 +177,8 @@ const ICT_CLASS =
     },
     {
         Name: "Caballero, Janna Lyn Condiman",
-        Content: "No Information Given",
-        image: ""
+        Content: "Cultural variation refers to the rich diversity in social practices that different cultures exhibit around the world. Cuisine and art all change from one culture to the next, but so do gender roles, economic systems, and social hierarchy among any number of other humanly organised behaviours. Cultural differences influences perception by creating lived experiences that teach certain beliefs, values, behaviors, and communication styles. These differences influence the way that people view the world around. ",
+        image: "https://www.onlinemswprograms.com/wp-content/uploads/sites/55/2021/05/5296_MSW-Minisite_Cultural-Sensitivity-Hero.jpg"
     },
     {
         Name: "Castro, Princess Yexa Raiven Ramos",
@@ -223,5 +223,6 @@ const ICT_CLASS =
 ]
 
 const LATE_STUDENTS = [
-    "Soria, Carlos Juaqin  Santos"
+    "Soria, Carlos Juaqin  Santos",
+    "Caballero, Janna Lyn Condiman",
 ];
